@@ -74,14 +74,30 @@ import { getFirestore, collection, doc, addDoc, setDoc, updateDoc, deleteDoc, on
 /* HIER FIREBASE CONFIG EINTRAGEN:
    Firebase Console → Project settings → Your apps → Web app → firebaseConfig kopieren.
 */
-const firebaseConfig = {
-  apiKey: "HIER_EINTRAGEN",
-  authDomain: "HIER_EINTRAGEN",
-  projectId: "HIER_EINTRAGEN",
-  storageBucket: "HIER_EINTRAGEN",
-  messagingSenderId: "HIER_EINTRAGEN",
-  appId: "HIER_EINTRAGEN"
-};
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCyHWeWTxKuhDIEBX3ybQXTHKBHE_LJ1ew",
+    authDomain: "yousra-app.firebaseapp.com",
+    projectId: "yousra-app",
+    storageBucket: "yousra-app.firebasestorage.app",
+    messagingSenderId: "859728837542",
+    appId: "1:859728837542:web:852cada25719ed7f6b2d67",
+    measurementId: "G-V21Y6VL0FT"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 
 const ADMIN_PIN="2468";
 let db=null, online=false;
